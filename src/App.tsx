@@ -7,6 +7,7 @@ import Ministerios from "./pages/Ministerios";
 import MinistryDetail from "./pages/MinistryDetail";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
+import Eventos from "./pages/Eventos";
 
 function App() {
   return (
@@ -26,12 +27,7 @@ function App() {
           />
           <Route path="/ministerios" element={<Ministerios />} />
           <Route path="/ministerios/:slug" element={<MinistryDetail />} />
-          <Route
-            path="/eventos"
-            element={
-              <PlaceholderPage title="Eventos" description="Agenda completa de eventos da igreja." />
-            }
-          />
+                    <Route path="/eventos" element={<Eventos />} />
           <Route
             path="/cultos"
             element={
@@ -68,6 +64,7 @@ function App() {
               />
             }
           />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
