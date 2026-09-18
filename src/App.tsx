@@ -1,13 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { MobileBottomNav } from "./components/layout/MobileBottomNav";
 import Home from "./pages/Home";
 import Ministerios from "./pages/Ministerios";
 import MinistryDetail from "./pages/MinistryDetail";
+import Eventos from "./pages/Eventos";
+import Contato from "./pages/Contato";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
-import Eventos from "./pages/Eventos";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           />
           <Route path="/ministerios" element={<Ministerios />} />
           <Route path="/ministerios/:slug" element={<MinistryDetail />} />
-                    <Route path="/eventos" element={<Eventos />} />
+          <Route path="/eventos" element={<Eventos />} />
           <Route
             path="/cultos"
             element={
@@ -46,15 +47,9 @@ function App() {
               />
             }
           />
-          <Route
-            path="/visite-nos"
-            element={
-              <PlaceholderPage
-                title="Visite-nos"
-                description="Tudo o que você precisa saber para planejar sua primeira visita."
-              />
-            }
-          />
+          <Route path="/contato" element={<Contato />} />
+          {/* Redirecionamento: caso algum link antigo ainda aponte para /visite-nos */}
+          <Route path="/visite-nos" element={<Navigate to="/contato" replace />} />
           <Route
             path="/contribua"
             element={
@@ -64,7 +59,6 @@ function App() {
               />
             }
           />
-          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

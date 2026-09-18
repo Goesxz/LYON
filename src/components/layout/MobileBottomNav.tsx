@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { IconHome, IconUsers, IconCalendarDots, IconPin, IconDots } from "../ui/icons";
+import { IconHome, IconUsers, IconCalendarDots, IconPhone, IconDots } from "../ui/icons";
 import { MobileMenu } from "./MobileMenu";
 
 /**
@@ -17,7 +17,7 @@ const primaryItems = [
   { label: "Home", href: "/", Icon: IconHome, end: true },
   { label: "Ministérios", href: "/ministerios", Icon: IconUsers, end: false },
   { label: "Eventos", href: "/eventos", Icon: IconCalendarDots, end: false },
-  { label: "Visite-nos", href: "/visite-nos", Icon: IconPin, end: false },
+  { label: "Visite-nos", href: "/visite-nos", Icon: IconPhone, end: false },
 ] as const;
 
 // Rotas que vivem "dentro" do menu Mais — usado só para destacar o botão

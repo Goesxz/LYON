@@ -41,9 +41,11 @@ export const siteConfig = {
     whatsappDisplay: "(11) 99019-9977",
     email: "goesxz@gmail.com",
     phone: "(11) 92718-6507",
+    // Horário de atendimento (não é o mesmo que o horário do culto) — usado na página de Contato.
+    hours: "[HORÁRIO DE ATENDIMENTO, ex: Seg a Sex · 9h às 18h]",
   },
 
-    social: {
+  social: {
     instagram: "https://www.instagram.com/lyon.church/",
     instagramHandle: "@lyon.church",
     // A igreja ainda não tem canal no YouTube — deixe vazio ("") até que seja criado.
@@ -96,5 +98,5 @@ export const navLinks = [
   { label: "Eventos", href: "/eventos" },
   { label: "Cultos", href: "/cultos" },
   { label: "Conecte-se", href: "/conecte-se" },
-  { label: "Visite-nos", href: "/visite-nos" },
+  { label: "Contato", href: "/contato" },
 ] as const;

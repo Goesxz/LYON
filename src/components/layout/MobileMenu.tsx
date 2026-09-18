@@ -69,7 +69,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         </nav>
 
         <a
-          href="/visite-nos"
+          href="/contato"
           onClick={onClose}
           className="min-h-[48px] inline-flex items-center justify-center rounded-full bg-ink-950 px-6 py-3.5 text-center font-medium text-white transition-colors hover:bg-gold-500 hover:text-ink-950"
         >

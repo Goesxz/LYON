@@ -27,7 +27,7 @@ export function Hero() {
             Conheça nossa igreja
           </a>
           <a
-            href="/visite-nos"
+            href="/contato"
             className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-white/50 px-7 py-3.5 text-sm md:text-base font-medium text-white transition-colors duration-300 hover:bg-white/10 hover:border-white"
           >
             Venha nos visitar

@@ -38,7 +38,7 @@ export function Header() {
 
         <div className="hidden md:block">
           
-          <a  href="/visite-nos"
+          <a  href="/contato"
             className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-ink-950 px-5 py-2.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-gold-500 hover:text-ink-950"
           >
             Visite nossa igreja
