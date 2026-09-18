@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
+import { MobileBottomNav } from "./components/layout/MobileBottomNav";
 import Home from "./pages/Home";
 import Ministerios from "./pages/Ministerios";
 import MinistryDetail from "./pages/MinistryDetail";
@@ -71,6 +72,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <MobileBottomNav />
     </BrowserRouter>
   );
 }
