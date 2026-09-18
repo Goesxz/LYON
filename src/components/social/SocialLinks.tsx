@@ -17,7 +17,9 @@ export function SocialLinks({ variant = "dark", className = "" }: SocialLinksPro
       label: "WhatsApp",
       Icon: IconWhatsapp,
     },
-  ];
+    // Links vazios (ex: rede social que a igreja ainda não usa) são filtrados
+    // automaticamente, então nenhum botão quebrado aparece no site.
+  ].filter((link) => link.href && !link.href.startsWith("["));
 
   return (
     <div className={`flex items-center gap-4 ${className}`}>

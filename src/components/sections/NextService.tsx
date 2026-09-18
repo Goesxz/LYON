@@ -1,9 +1,11 @@
 import { siteConfig } from "../../data/site";
 import { IconPin, IconClock, IconCalendarPlus } from "../ui/icons";
 import { Reveal } from "../ui/Reveal";
+import { getNextSundayLabel } from "../../utils/date";
 
 export function NextService() {
   const { nextService, address } = siteConfig;
+  const nextSundayDate = getNextSundayLabel();
 
   return (
     <section className="relative z-10 -mt-10 md:-mt-14 px-4 md:px-0">
@@ -15,7 +17,7 @@ export function NextService() {
                 {nextService.label}
               </span>
               <p className="mt-2 font-display text-2xl md:text-3xl font-medium text-ink-950">
-                {nextService.day}, {nextService.date}
+                {nextService.day}, {nextSundayDate}
               </p>
 
               <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-600">
@@ -29,16 +31,16 @@ export function NextService() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row md:flex-shrink-0">
-              <a
-                href={address.mapsUrl}
+              
+               <a href={address.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-ink-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gold-500 hover:text-ink-950"
               >
                 Como chegar
               </a>
-              <a
-                href="#"
+              
+                <a href="#"
                 className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-ink-900/15 px-6 py-3 text-sm font-medium text-ink-900 transition-colors hover:bg-ink-900/5"
               >
                 <IconCalendarPlus className="h-4 w-4" /> Adicionar à agenda

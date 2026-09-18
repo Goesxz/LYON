@@ -47,15 +47,17 @@ export function OnlineChurch() {
               Assistir ao culto
             </a>
             <div className="flex gap-3">
-              <a
-                href={siteConfig.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition-colors hover:bg-ink-900/5"
-              >
-                <IconYoutube />
-              </a>
+              {siteConfig.social.youtube && (
+                <a
+                  href={siteConfig.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition-colors hover:bg-ink-900/5"
+                >
+                  <IconYoutube />
+                </a>
+              )}
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"

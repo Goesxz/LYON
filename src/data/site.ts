@@ -10,38 +10,45 @@
  */
 
 export const siteConfig = {
-  churchName: "[NOME DA IGREJA]",
-  churchShortName: "[SIGLA/NOME CURTO]",
+  churchName: "Lyon Church",
+  churchShortName: "Lyon Church",
   tagline: "Uma igreja para viver a presença de Deus.",
   metaDescription:
-    "[NOME DA IGREJA] — uma comunidade de fé em [CIDADE], acolhendo pessoas para viver a presença de Deus, crescer em comunidade e servir com propósito.",
+    "Lyon Church — uma comunidade de fé em Embu das Artes, acolhendo pessoas para viver a presença de Deus, crescer em comunidade e servir com propósito.",
 
   url: "https://www.suaigreja.com.br",
 
   address: {
-    street: "[ENDEREÇO COMPLETO]",
-    neighborhood: "[BAIRRO]",
-    city: "[CIDADE]",
-    state: "[UF]",
-    zip: "[CEP]",
-    mapsUrl: "https://maps.google.com/?q=[ENDEREÇO+COMPLETO]",
+    street: "Estr. de Itapecerica, 2124 - Sala 03",
+    neighborhood: "Jardim Santo Eduardo",
+    city: "Embu das Artes",
+    state: "SP",
+    zip: "06823-301",
+    mapsUrl:
+      "https://maps.google.com/?q=Estr.+de+Itapecerica,+2124+-+Jardim+Santo+Eduardo,+Embu+das+Artes+-+SP,+06823-301",
+    // Embed sem precisar de chave de API do Google: usa o formato "output=embed".
+    // Se quiser trocar por um embed oficial gerado pelo próprio Google Maps
+    // (Menu > Compartilhar > Incorporar um mapa > copiar o src do iframe),
+    // é só colar a URL completa aqui no lugar desta.
     mapsEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
-    lat: -23.55052,
-    lng: -46.633308,
+      "https://www.google.com/maps?q=Estr.+de+Itapecerica,+2124+-+Jardim+Santo+Eduardo,+Embu+das+Artes+-+SP,+06823-301&output=embed",
+    lat: -23.6489,
+    lng: -46.8511,
   },
 
   contact: {
-    whatsapp: "[WHATSAPP, ex: 5511999999999]",
-    whatsappDisplay: "[WHATSAPP EXIBIÇÃO, ex: (11) 99999-9999]",
-    email: "[EMAIL@SUAIGREJA.COM.BR]",
-    phone: "[TELEFONE]",
+    whatsapp: "5511990199977",
+    whatsappDisplay: "(11) 99019-9977",
+    email: "goesxz@gmail.com",
+    phone: "(11) 92718-6507",
   },
 
   social: {
-    instagram: "[LINK DO INSTAGRAM]",
-    instagramHandle: "@[USUARIO]",
-    youtube: "[LINK DO YOUTUBE]",
+    instagram: "https://www.instagram.com/lyon.church/",
+    instagramHandle: "@lyon.church",
+    // A igreja ainda não tem canal no YouTube — deixe vazio ("") até que seja criado.
+    // Os componentes que usam este campo já escondem o botão/link automaticamente quando está vazio.
+    youtube: "",
     facebook: "[LINK DO FACEBOOK]",
     tiktok: "[LINK DO TIKTOK]",
     spotify: "[LINK DO SPOTIFY]",
@@ -49,34 +56,21 @@ export const siteConfig = {
 
   services: [
     {
-      id: "domingo-manha",
-      label: "Culto de Domingo — Manhã",
+      id: "domingo",
+      label: "Culto de Domingo",
       day: "Domingo",
-      time: "[HORÁRIO, ex: 10h]",
-      location: "Templo Sede",
-    },
-    {
-      id: "domingo-noite",
-      label: "Culto de Domingo — Noite",
-      day: "Domingo",
-      time: "[HORÁRIO, ex: 18h]",
-      location: "Templo Sede",
-    },
-    {
-      id: "quarta",
-      label: "Culto de Oração",
-      day: "Quarta-feira",
-      time: "[HORÁRIO, ex: 20h]",
-      location: "Templo Sede",
+      time: "18h",
+      location: "Estr. de Itapecerica, 2124 - Sala 03",
     },
   ],
 
   nextService: {
     label: "Próximo culto",
     day: "Domingo",
-    date: "[DATA, ex: 21 de setembro]",
-    time: "[HORÁRIO, ex: 18h]",
-    location: "[NOME DO LOCAL / ENDEREÇO CURTO]",
+    // A data não fica fixa aqui — como o culto é toda semana aos domingos,
+    // ela é calculada automaticamente em src/utils/date.ts (getNextSundayLabel).
+    time: "18h",
+    location: "Estr. de Itapecerica, 2124 - Sala 03 — Embu das Artes/SP",
   },
 
   giving: {
@@ -88,8 +82,10 @@ export const siteConfig = {
   online: {
     title: "Continue conectado de onde estiver.",
     description:
-      "Assista aos nossos cultos ao vivo ou revisite mensagens anteriores, onde quer que você esteja.",
-    liveUrl: "[LINK DA TRANSMISSÃO AO VIVO]",
+      "Acompanhe nossos cultos e conteúdos pelo Instagram, onde quer que você esteja.",
+    // Sem YouTube por enquanto — o botão "Assistir ao culto" aponta para o Instagram.
+    // Quando houver um link direto de live, troque aqui.
+    liveUrl: "https://www.instagram.com/lyon.church/",
   },
 } as const;
 
