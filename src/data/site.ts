@@ -43,15 +43,16 @@ export const siteConfig = {
     phone: "(11) 92718-6507",
   },
 
-  social: {
+    social: {
     instagram: "https://www.instagram.com/lyon.church/",
     instagramHandle: "@lyon.church",
     // A igreja ainda não tem canal no YouTube — deixe vazio ("") até que seja criado.
     // Os componentes que usam este campo já escondem o botão/link automaticamente quando está vazio.
     youtube: "",
-    facebook: "[LINK DO FACEBOOK]",
-    tiktok: "[LINK DO TIKTOK]",
-    spotify: "[LINK DO SPOTIFY]",
+    // Facebook, TikTok e Spotify não são usados por enquanto — removidos daqui.
+    // Se a igreja passar a usar algum desses, é só adicionar o campo de volta
+    // (siga o mesmo padrão de "instagram"/"youtube" acima) e usá-lo em
+    // src/components/social/SocialLinks.tsx.
   },
 
   services: [
