@@ -1,10 +1,19 @@
 import type { Ministry } from "../../data/ministries";
 
-export function MinistryCard({ ministry }: { ministry: Ministry }) {
+interface MinistryCardProps {
+  ministry: Ministry;
+  /** false = ocupa 100% da largura do card pai (uso em grid, ex: página de ministérios).
+   *  true (padrão) = largura fixa pensada para a faixa de scroll horizontal da Home. */
+  scrollWidth?: boolean;
+}
+
+export function MinistryCard({ ministry, scrollWidth = true }: MinistryCardProps) {
   return (
-    <a
-      href={`/ministerios#${ministry.id}`}
-      className="group relative flex-shrink-0 w-[78vw] xs:w-[70vw] sm:w-auto aspect-[3/4] overflow-hidden rounded-card bg-ink-900 snap-start"
+    
+    <a  href={`/ministerios/${ministry.id}`}
+      className={`group relative flex-shrink-0 aspect-[3/4] overflow-hidden rounded-card bg-ink-900 snap-start ${
+        scrollWidth ? "w-[78vw] xs:w-[70vw] sm:w-auto" : "w-full"
+      }`}
     >
       <img
         src={ministry.image}

@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import Home from "./pages/Home";
+import Ministerios from "./pages/Ministerios";
+import MinistryDetail from "./pages/MinistryDetail";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
@@ -21,15 +23,8 @@ function App() {
               />
             }
           />
-          <Route
-            path="/ministerios"
-            element={
-              <PlaceholderPage
-                title="Ministérios"
-                description="Conheça em detalhes cada ministério e como fazer parte."
-              />
-            }
-          />
+          <Route path="/ministerios" element={<Ministerios />} />
+          <Route path="/ministerios/:slug" element={<MinistryDetail />} />
           <Route
             path="/eventos"
             element={
